@@ -1,9 +1,12 @@
 # neo-lang
 ##Target:
->this is a javascript library for Iterator.
->provide Abstract Iterator and ArrayIterator.
->This library can be used in nodejs and web navigator.
+
+This is a javascript library of Iterator.
+provide Abstract Iterator and ArrayIterator.
+This library can be used in nodejs and web navigator.
+
 ##Requiremnt:
+
 We want get elements of a collection one by one ,but we don't know its internal structure.We hope something can provide 
 such functionality as simple as possible.So, Iterator is such thing.The usage should like this:
     
@@ -11,7 +14,12 @@ such functionality as simple as possible.So, Iterator is such thing.The usage sh
     while(iterator.hasNext()){
        var next=iterator.next();
     }
-    
+
+    //or
+    while(!iterator.eof){
+       var next=iterator.next();
+    }
+
 essential behavior of iterator
 
 1. client of iterator can get something from iterator ,i.e., by calling next() ,getting a result. 
@@ -26,32 +34,31 @@ npm install neo-iterator
 
     var Iterators=require('neo-iterator');
     var oneArray=['a','b','c']
-    var iterator=new Iterators.ArrayIterator();
+    var iterator=new Iterators.ArrayIterator(oneArray);
     while(iterator.hasNext()){
        console.log(iterator.next()); //'a','b','c' will be printed one by one;
     }
     
 ##API
 
-Constructor:
+### Constructor
 
-> Iterator(collection)
+1. **Iterator(data)**
 
-Field
+### Field ###
 
-> data:which is the collection data ,
+1. **data:** &nbsp;which is a collection .
+1. **current:** &nbsp;the element of current,which returned by next().
+1. **eof:** &nbsp;if there is no more element , eof is true.
 
-> current:
+### Method ###
 
-> eof:
-
-Method
-
-> hasNext():
-
-> next():
-
-> inquiryEnd(element):
+1. **reset():**&nbsp;reset will set state of Iterator to initial state.Internal,it will call setCurrent(null). 
+2. **getCurrent():**&nbsp;return the element just have got.
+3. **setCurrent(element):**&nbsp;set current element to specified element. if the element is last one, eof will be set to true.
+2. **hasNext():**&nbsp;if has next element, it return true.
+1. **next():**&nbsp;return next element if it existing.If last one is return ,the eof will be set to true.Normally ,subclass of iterator should override this method.
+1. **inquiryEnd(element):**&nbsp;query whether this element is the last element. This method will not effect the state of Iterator. Normally ,subclass of iterator should override this method.
 
 ##Extention
 
@@ -59,7 +66,7 @@ Since this library only provides an abstract Iterator and an array Iterator, if 
 you can extend abstract Iterator.two method should be overrided: 
 
 1. next() :get next element
-2. inquiryEnd(element):query whether this element is the end element.
+1. inquiryEnd(element):query whether this element is the end element.
 
 
         var Iterators=require('neo-iterator');
@@ -76,3 +83,4 @@ you can extend abstract Iterator.two method should be overrided:
         });
 
       
+Live example please see [ArrayIterator](https://github.com/ouonet/neo-iterator/blob/master/lib/ArrayIterator.js)

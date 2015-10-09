@@ -22,14 +22,14 @@ describe("Behave",function(){
     it("reset ",function(){
         var it1=new Iterator();
         should.equal(it1.current,null);
-        should.equal(it1.eof,false);
+        should.equal(it1.eof,true);
     })
     it("next ",function(){
         var it1=new Iterator();
         should.equal(it1.next(),null);
     })
-    it("next ",function(){
+    it("hasNext ",function(){
         var it1=new Iterator();
-        should.equal(it1.next(),null);
+        should.equal(it1.hasNext(),false);
     })
 })

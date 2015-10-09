@@ -2,7 +2,7 @@
 
 ##Target:
 
-this is a javascript library for Iterator.provide Abstract Iterator and ArrayIterator.This library can be used in nodejs and web navigator.
+This is a javascript library for Iterator,including Abstract Iterator and ArrayIterator.It can be used in nodejs and web navigator.
 
 ##Requiremnt:
 

@@ -1,8 +1,8 @@
 # neo-lang
 ##Target:
-    this is a javascript library for Iterator.
-    provide Abstract Iterator and ArrayIterator.
-    This library can be used in nodejs and web navigator.
+>this is a javascript library for Iterator.
+>provide Abstract Iterator and ArrayIterator.
+>This library can be used in nodejs and web navigator.
 ##Requiremnt:
     We want get elements of a collection one by one ,but we don't know its internal structure.We hope something can provide 
     such functionality as simple as possible.So, Iterator is such thing.

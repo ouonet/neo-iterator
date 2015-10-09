@@ -45,8 +45,8 @@ Since this library only provides an abstract Iterator and an array Iterator, if 
     
 you can extend abstract Iterator.two method should be overrided: 
     
-1.next() :get next element,
-2.inquiryEnd(element):query whether this element is the end element.
+1. next() :get next element,
+2. inquiryEnd(element):query whether this element is the end element.
     
     var Iterators=require('neo-iterator');
     var neo=require('neo-lang');

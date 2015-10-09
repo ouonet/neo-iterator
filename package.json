@@ -24,6 +24,6 @@
     "should": "^7.1.0"
   },
   "dependencies": {
-    "neo-lan": "git+https://github.com/ouonet/neo-lang.git"
+    "neo-lang": "git+https://github.com/ouonet/neo-lang.git"
   }
 }

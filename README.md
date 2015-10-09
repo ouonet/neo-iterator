@@ -1,4 +1,4 @@
-# neo-lang
+# neo-Iterator
 ##Target:
 
 This is a javascript library of Iterator.

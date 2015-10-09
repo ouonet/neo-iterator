@@ -14,13 +14,14 @@ such functionality as simple as possible.So, Iterator is such thing.The usage sh
        var next=iterator.next();
     }
     
-essential behavior of iterator
-1.client of iterator can get something from iterator ,i.e., by calling next() ,getting a result. 
-2.if an instance of iterator will return  something(i.e. result of next() is not null),calling hasNext() should get *true,otherwise false should be got.
+Essential behavior of iterator
+
+1. client of iterator can get something from iterator ,i.e., by calling next() ,getting a result. 
+2. if an instance of iterator will return  something(i.e. result of next() is not null),calling hasNext() should get *true,otherwise false should be got.
     
 ##install
     
-    npm install neo-iterator
+npm install neo-iterator
     
 ##Usage
 
@@ -40,10 +41,12 @@ essential behavior of iterator
     Method
        
 ##Extention
-    Since this library only provides an abstract Iterator and an array Iterator, if you want to implement an iterator for other data model,e.g. a Tree,
-    you can extend abstract Iterator.two method should be overrided: 
-    1.next() :get next element,
-    2.inquiryEnd(element):query whether this element is the end element.
+Since this library only provides an abstract Iterator and an array Iterator, if you want to implement an iterator for other data model,e.g. a Tree,
+    
+you can extend abstract Iterator.two method should be overrided: 
+    
+1.next() :get next element,
+2.inquiryEnd(element):query whether this element is the end element.
     
     var Iterators=require('neo-iterator');
     var neo=require('neo-lang');

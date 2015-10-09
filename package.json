@@ -1,5 +1,5 @@
 {
-  "name": "neo.iterator",
+  "name": "neo-iterator",
   "version": "1.0.0",
   "description": "abstractor iterator",
   "main": "index.js",

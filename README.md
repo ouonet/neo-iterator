@@ -62,17 +62,17 @@ you can extend abstract Iterator.two method should be overrided:
 2. inquiryEnd(element):query whether this element is the end element.
 
 
-    var Iterators=require('neo-iterator');
-    var neo=require('neo-lang');
-    var Iterator=Iterators.Iterator;
-    function SomeIterator(data){
-        Iterator.apply(this,arguments);
-        //ToDo your code
-        return this;
-    }
-    neo.extend(SomeIterator,Iterator,{
-        next:function(){},
-        inquiryEnd:function(element){}
-    });
+        var Iterators=require('neo-iterator');
+        var neo=require('neo-lang');
+        var Iterator=Iterators.Iterator;
+        function SomeIterator(data){
+            Iterator.apply(this,arguments);
+            //ToDo your code
+            return this;
+        }
+        neo.extend(SomeIterator,Iterator,{
+            next:function(){},
+            inquiryEnd:function(element){}
+        });
 
       

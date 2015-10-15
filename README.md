@@ -54,9 +54,9 @@ npm install neo-iterator
 ### Method ###
 
 1. **reset():**&nbsp;reset will set state of Iterator to initial state.Internal,it will call setCurrent(null). 
-2. **getCurrent():**&nbsp;return the element just have got.
-3. **setCurrent(element):**&nbsp;set current element to specified element. if the element is last one, eof will be set to true.
-2. **hasNext():**&nbsp;if has next element, it return true.
+1. **getCurrent():**&nbsp;return the element just have got.
+1. **setCurrent(element):**&nbsp;set current element to specified element. if the element is last one, eof will be set to true.
+1. **hasNext():**&nbsp;if has next element, it return true.
 1. **next():**&nbsp;return next element if it existing.If last one is return ,the eof will be set to true.Normally ,subclass of iterator should override this method.
 1. **inquiryEnd(element):**&nbsp;query whether this element is the last element. This method will not effect the state of Iterator. Normally ,subclass of iterator should override this method.
 

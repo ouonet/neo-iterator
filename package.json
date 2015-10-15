@@ -4,7 +4,8 @@
   "description": "abstractor iterator",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build":"browserify index.js -o dist/neo-iterator.js"
   },
   "repository": {
     "type": "git",

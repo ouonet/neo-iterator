@@ -12,7 +12,7 @@ module.exports={
  */
 'use strict';
 var Iterator = require('./Iterator');
-var neo = require('neo-lang');
+var neo = require('neo_lang');
 /*
  Array 的iterator
  */
@@ -51,7 +51,7 @@ neo.extend(ArrayIterator, Iterator, {
 });
 
 module.exports = ArrayIterator;
-},{"./Iterator":3,"neo-lang":4}],3:[function(require,module,exports){
+},{"./Iterator":3,"neo_lang":"neo_lang"}],3:[function(require,module,exports){
 /**
  * Created by neo on 2015/10/7.
  */
@@ -89,12 +89,12 @@ proto.next = function () {
     return null;
 };
 module.exports = Iterator;
-},{}],4:[function(require,module,exports){
+},{}],"neo_lang":[function(require,module,exports){
 /**
  * Created by neo on 2015/10/7.
  */
 'use strict';
-module.exports.extend = (function () {
+var extend = (function () {
     // inline overrides
     var ua = typeof navigator == "object" && (typeof navigator.userAgent == 'string' )
             ? navigator.userAgent.toLowerCase() : "",
@@ -166,5 +166,6 @@ module.exports.extend = (function () {
     };
 })();
 
-},{}]},{},[1])(1)
+module.exports.extend=extend;
+},{}]},{},[1])("neo_lang")
 });

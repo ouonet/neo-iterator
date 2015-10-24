@@ -1,15 +1,15 @@
 {
-  "name": "neo-iterator",
+  "name": "neo_iterator",
   "version": "1.0.0",
   "description": "abstractor iterator",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build":"browserify index.js -s neoIterator -o dist/neo-iterator.js"
+    "build": "browserify index.js -s neo_iterator --exclude neo_lang -r neo_lang -o dist/neo_iterator.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ouonet/neoiterator.git"
+    "url": "git+https://github.com/ouonet/neo_iterator.git"
   },
   "keywords": [
     "javascript",
@@ -18,13 +18,13 @@
   "author": "liang.gong@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ouonet/neoiterator/issues"
+    "url": "https://github.com/ouonet/neo_iterator/issues"
   },
-  "homepage": "https://github.com/ouonet/neoiterator#readme",
+  "homepage": "https://github.com/ouonet/neo_iterator#readme",
   "devDependencies": {
     "should": "^7.1.0"
   },
   "dependencies": {
-    "neo-lang": "git+https://github.com/ouonet/neo-lang.git"
+    "neo_lang": "git+https://github.com/ouonet/neo_lang.git"
   }
 }

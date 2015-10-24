@@ -1,8 +1,8 @@
 {
-  "name": "neo-iterator",
-  "main": "dist/neo-iterator.js",
+  "name": "neo_iterator",
+  "main": "dist/neo_iterator.js",
   "version": "1.0.0",
-  "homepage": "https://github.com/ouonet/neo-iterator",
+  "homepage": "https://github.com/ouonet/neo_iterator",
   "authors": [
     "neo <liang.gong@gmail.com>"
   ],

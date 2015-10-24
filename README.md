@@ -1,4 +1,4 @@
-# neo-Iterator
+# neo_Iterator
 ##Target:
 
 This is a javascript library of Iterator.
@@ -28,11 +28,11 @@ essential behavior of iterator
     
 ##install
     
-npm install neo-iterator
+npm install neo_iterator
     
 ##Usage
 
-    var Iterators=require('neo-iterator');
+    var Iterators=require('neo_iterator');
     var oneArray=['a','b','c']
     var iterator=new Iterators.ArrayIterator(oneArray);
     while(iterator.hasNext()){
@@ -69,8 +69,8 @@ you can extend abstract Iterator.two method should be overrided:
 1. inquiryEnd(element):query whether this element is the end element.
 
 
-        var Iterators=require('neo-iterator');
-        var neo=require('neo-lang');
+        var Iterators=require('neo_iterator');
+        var neo=require('neo_lang');
         var Iterator=Iterators.Iterator;
         function SomeIterator(data){
             Iterator.apply(this,arguments);
@@ -83,4 +83,4 @@ you can extend abstract Iterator.two method should be overrided:
         });
 
       
-Live example please see [ArrayIterator](https://github.com/ouonet/neo-iterator/blob/master/lib/ArrayIterator.js)
+Live example please see [ArrayIterator](https://github.com/ouonet/neo_iterator/blob/master/lib/ArrayIterator.js)
